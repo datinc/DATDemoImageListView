@@ -28,6 +28,7 @@
     
     UILabel* topLabel = [UILabel new];
     topLabel.text = @"Top Label";
+    topLabel.backgroundColor = [UIColor redColor];
     [self.stackView addArrangedSubview:topLabel];
     
     NSMutableArray* images = [NSMutableArray new];
@@ -40,6 +41,7 @@
     
     UILabel* bottomLabel = [UILabel new];
     bottomLabel.text = @"Bottom Label";
+    bottomLabel.backgroundColor = [UIColor greenColor];
     [self.stackView addArrangedSubview:bottomLabel];
 }
 
@@ -48,7 +50,7 @@
     [super viewDidLayoutSubviews];
     
     CGRect stackRect = CGRectZero;
-    stackRect.size = [self.stackView systemLayoutSizeFittingSize:CGSizeMake(100, 0) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityDefaultLow];
+    stackRect.size = [self.stackView systemLayoutSizeFittingSize:CGSizeMake(150, 0) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityDefaultLow];
     
     stackRect.origin.x = (self.view.bounds.size.width - stackRect.size.width) / 2.0;
     stackRect.origin.y = (self.view.bounds.size.height - stackRect.size.height) / 2.0;
