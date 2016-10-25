@@ -27,7 +27,8 @@
     [self.view addSubview:self.stackView];
     
     UILabel* topLabel = [UILabel new];
-    topLabel.text = @"Top Label";
+    topLabel.text = @"Top Label.\nNotice how this label can go on multiple lines and the stack view sizes the height dynamically.";
+    topLabel.numberOfLines = 0;
     topLabel.backgroundColor = [UIColor redColor];
     [self.stackView addArrangedSubview:topLabel];
     
@@ -40,7 +41,7 @@
     [self.stackView addArrangedSubview:listView];
     
     UILabel* bottomLabel = [UILabel new];
-    bottomLabel.text = @"Bottom Label";
+    bottomLabel.text = @"Bottom Label.";
     bottomLabel.backgroundColor = [UIColor greenColor];
     [self.stackView addArrangedSubview:bottomLabel];
 }
